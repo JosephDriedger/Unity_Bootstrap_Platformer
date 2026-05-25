@@ -20,23 +20,20 @@ public class Jump : MonoBehaviour
         if (Keyboard.current == null) return;
         if (Keyboard.current[jumpKey].wasPressedThisFrame && isGrounded)
         {
+            isGrounded = false;
             rb.AddForce(rb.transform.up * jumpStrength, ForceMode.Impulse);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        foreach (ContactPoint contact in collision.contacts)
         {
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
+            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5f)
+            {
+                isGrounded = true;
+                return;
+            }
         }
     }
 }
