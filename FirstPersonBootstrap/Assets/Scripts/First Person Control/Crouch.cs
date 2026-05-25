@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Crouch : MonoBehaviour
 {
     public float crouchAmount = 0.25f;
-    public KeyCode crouchKey = KeyCode.LeftControl;
+    public Key crouchKey = Key.LeftCtrl;
 
     private Rigidbody rb;
     private float normalYLocalPosition = 1;
@@ -17,12 +16,12 @@ public class Crouch : MonoBehaviour
         normalYLocalPosition = rb.transform.localScale.y;
     }
 
-
     void Update()
     {
-        float currentYVal = Input.GetKey(crouchKey)
-                                    ? normalYLocalPosition - crouchAmount
-                                    : normalYLocalPosition;
+        if (Keyboard.current == null) return;
+        float currentYVal = Keyboard.current[crouchKey].isPressed
+                                ? normalYLocalPosition - crouchAmount
+                                : normalYLocalPosition;
 
         rb.transform.localScale = new Vector3(rb.transform.localScale.x,
                                                   currentYVal,

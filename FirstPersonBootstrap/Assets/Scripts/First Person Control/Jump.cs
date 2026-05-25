@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Jump : MonoBehaviour
 {
     public float jumpStrength = 5;
-    public KeyCode jumpKey = KeyCode.Space;
+    public Key jumpKey = Key.Space;
 
     private Rigidbody rb;
     private bool isGrounded = true;
@@ -18,7 +17,8 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(jumpKey) && isGrounded)
+        if (Keyboard.current == null) return;
+        if (Keyboard.current[jumpKey].wasPressedThisFrame && isGrounded)
         {
             rb.AddForce(rb.transform.up * jumpStrength, ForceMode.Impulse);
         }

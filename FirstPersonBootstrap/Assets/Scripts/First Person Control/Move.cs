@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Collider),typeof(Rigidbody))]
 public class Move : MonoBehaviour
 {
     public float walkSpeed = 5;
     public float runSpeed = 10;
-    public KeyCode runKey = KeyCode.LeftShift;
+    public Key runKey = Key.LeftShift;
 
     private Rigidbody rb;
 
@@ -16,13 +15,16 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float speed = Input.GetKey(runKey) ? runSpeed : walkSpeed;
+        var keyboard = Keyboard.current;
+        if (keyboard == null) return;
+        float speed = keyboard[runKey].isPressed ? runSpeed : walkSpeed;
 
-        float inputX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        float inputZ = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float inputX = (keyboard.dKey.isPressed ? 1f : 0f) - (keyboard.aKey.isPressed ? 1f : 0f);
+        float inputZ = (keyboard.wKey.isPressed ? 1f : 0f) - (keyboard.sKey.isPressed ? 1f : 0f);
 
-        rb.transform.Translate(inputX, 0, inputZ);
+        Vector3 move = rb.transform.TransformDirection(new Vector3(inputX, 0, inputZ)) * speed;
+        rb.linearVelocity = new Vector3(move.x, rb.linearVelocity.y, move.z);
     }
 }
