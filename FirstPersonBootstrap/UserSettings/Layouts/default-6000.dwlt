@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 53
+  controlID: 43
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 54
+  controlID: 44
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 56}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 55
+  controlID: 45
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -630,22 +630,9 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -149240
-      - m_Data: -148150
-      - m_Data: -97794
-      - m_Data: -97762
-      - m_Data: -97470
-      - m_Data: -96944
-      - m_Data: -26524
-      - m_Data: -22504
-      - m_Data: -22500
-      - m_Data: -22466
-      - m_Data: -22400
-      - m_Data: -22218
-      - m_Data: -11742
-      - m_Data: -1394
+      - m_Data: -3442
+      - m_Data: -3384
       - m_Data: -1332
-      - m_Data: 51006
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1280,9 +1267,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -49.421467, y: -115.114624, z: 97.249115}
+    m_Target: {x: -11.238983, y: -63.83783, z: -63.741154}
     speed: 2
-    m_Value: {x: -49.421467, y: -115.114624, z: 97.249115}
+    m_Value: {x: -11.238983, y: -63.83783, z: -63.741154}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1328,13 +1315,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.32812575, y: -0.27593428, z: 0.10085163, w: 0.89779806}
+    m_Target: {x: -0.02292452, y: -0.93207556, z: 0.3565926, w: -0.059922613}
     speed: 2
-    m_Value: {x: 0.32677564, y: -0.2760827, z: 0.10043667, w: 0.8982809}
+    m_Value: {x: 0.022924522, y: 0.9320756, z: -0.3565926, w: 0.059922617}
   m_Size:
-    m_Target: 101.70122
+    m_Target: 73.445244
     speed: 2
-    m_Value: 106.49342
+    m_Value: 70.28253
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1507,7 +1494,7 @@ MonoBehaviour:
       y: 21
       width: 1950
       height: 922
-    m_Scale: {x: 0.8537036, y: 0.8537037}
+    m_Scale: {x: 0.8537037, y: 0.8537037}
     m_Translation: {x: 975, y: 461}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1619,7 +1606,7 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -149240
+  m_LastSelectedObjectID: 0
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1669,7 +1656,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/POLY STYLE - Platformer Starter Pack/Platformer Starter Pack_URP/Prefabs/Environments
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1679,26 +1666,25 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/POLY STYLE - Platformer Starter Pack/Platformer Starter Pack_URP/Prefabs/Environments
+  - Assets/Scenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\Unity_Bootstrap_Platformer\FirstPersonBootstrap
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 74}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 31680
+    - m_Data: 31474
     m_LastClickedID:
-      m_Data: 31680
+      m_Data: 31474
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 29914
-    - m_Data: 30018
-    - m_Data: 31630
-    - m_Data: 31646
-    - m_Data: 31894
-    - m_Data: 31902
+    - m_Data: 31342
+    - m_Data: 31344
+    - m_Data: 31346
+    - m_Data: 31348
+    - m_Data: 31350
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -1733,7 +1719,11 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 29914
+    - m_Data: 31342
+    - m_Data: 31344
+    - m_Data: 31346
+    - m_Data: 31348
+    - m_Data: 31350
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -9,14 +9,27 @@ public class Move : MonoBehaviour
     public Key runKey = Key.LeftShift;
 
     private Rigidbody rb;
+    private float _stunUntil = -1f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
+    /// <summary>
+    /// Suppresses movement input for <paramref name="duration"/> seconds so that
+    /// knockback impulses (e.g. from HammerKnock) aren't immediately overridden.
+    /// </summary>
+    public void Stun(float duration)
+    {
+        _stunUntil = Time.time + duration;
+    }
+
     void FixedUpdate()
     {
+        // During a stun (knockback), let physics carry the player freely.
+        if (Time.time < _stunUntil) return;
+
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
         float speed = keyboard[runKey].isPressed ? runSpeed : walkSpeed;

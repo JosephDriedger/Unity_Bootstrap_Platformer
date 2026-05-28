@@ -21,5 +21,7 @@ public class PlayerReset : MonoBehaviour
     public void ResetPlayer(GameObject other)
     {
         other.transform.position = spawnPoint.position;
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        if (rb != null) rb.linearVelocity = Vector3.zero;
     }
 }

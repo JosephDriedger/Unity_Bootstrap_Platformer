@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6468654778098742602}
   - component: {fileID: 3681827857272530671}
   - component: {fileID: 3806081730421292180}
+  - component: {fileID: 534880903750247992}
+  - component: {fileID: 343230456388454278}
+  - component: {fileID: 335219227501288807}
   m_Layer: 0
   m_Name: Props_5a
   m_TagString: Untagged
@@ -86,6 +89,53 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &534880903750247992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338071358202630470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58dbe47db75f47618a229a0b8f8af98d, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &343230456388454278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338071358202630470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba78b030b50f4a11841b0fd3e5ead79e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  rotationAxis: {x: 0, y: 1, z: 0}
+  rotationSpeed: 90
+--- !u!65 &335219227501288807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338071358202630470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8385945678036860757
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +219,5 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
